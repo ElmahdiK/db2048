@@ -41,6 +41,8 @@ window.onload = _ => {
 		if (stickData.y < -70) moveTo(`D`);
 	});
 
+	if (!isMobile()) document.querySelector('#joystick1').classList.add('hidden');
+
 	// LOAD JSON & CONTENT
 	fetch(_pathJSON)
 		.then(response => {
@@ -64,6 +66,11 @@ const initGame = _ => {
 
 	putImg();
 	putImg();
+}
+const isMobile = () => {
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+		return true;
+	} else return false;
 }
 
 const putImg = (_row, _col, _niveau) => {
