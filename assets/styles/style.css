@@ -85,7 +85,7 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.3);
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -233,17 +233,23 @@ main {
 
 /* -- audio-song -- */
 
+#audio-voice{
+  opacity: 0;
+}
+
 #audio-song:hover {
   opacity: 0.9;
 }
 
 #audio-song {
   opacity: 0.2;
-  border-radius: 0px;
-  position: absolute;
+  transition: 0.2s;
+  margin-right: 10px;
+  /* border-radius: 0px; */
+  /* position: absolute;
   bottom: 10vh;
-  align-self: center;
-  display: none;
+  align-self: center; */
+  /* display: none; */
 }
 
 /* -- joystick1 -- */
